@@ -91,7 +91,6 @@ class Interpreter:
                     else:
                         left_braces.pop()
             current += 1
-        print('')
 
 def main() -> None:
     arg_parser: ArgumentParser = ArgumentParser()
@@ -99,7 +98,7 @@ def main() -> None:
     args = arg_parser.parse_args()
     with open(args.file_path) as file:
         source: str = ''.join(file.readlines())
-    interpreter : Interpreter = Interpreter(source)
+    interpreter: Interpreter = Interpreter(source)
     interpreter.parse()
 
 if __name__ == '__main__':
